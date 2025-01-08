@@ -219,6 +219,10 @@ const handleSubmit = () => {
           <span class="discounted-price">Rp 190.000</span>
           <span class="note-price">*Harga Sudah Termasuk Ongkir</span>
         </div>
+        <div class="cooperation">
+          <p>💬 Jangan ragu untuk menghubungi kami jika ingin bekerja sama atau memiliki pertanyaan! dan dapatkan tawaran terbaik anda</p>
+          <p>Klik Icon WA di pojok bawah</p>
+        </div>
         <button class="buy-button" @click="handleBuyNow">Beli Sekarang</button>
       </div>
     </section>
@@ -298,6 +302,11 @@ const handleSubmit = () => {
     :total-price="totalPrice"
     @close="showPaymentModal = false"
   />
+
+  <!-- WhatsApp Float Button -->
+  <a href="https://wa.me/6285973303899" class="whatsapp-float" target="_blank">
+    <i class="fab fa-whatsapp"></i>
+  </a>
 
   <section class="footer">
     <div class="footer-content">
