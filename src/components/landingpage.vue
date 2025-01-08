@@ -74,9 +74,9 @@ const orderForm = ref({
 })
 
 const products = [
-  { id: 'Wine', name: 'Wine', price: 600000 },
-  { id: 'Original', name: 'Original', price: 600000 },
-  { id: 'Aerob', name: 'Aerob', price: 600000 }
+  { id: 'Wine', name: 'Wine', price: 760000 },
+  { id: 'Original', name: 'Original', price: 760000 },
+  { id: 'Aerob', name: 'Aerob', price: 760000 }
 ]
 
 const weights = [
@@ -215,8 +215,9 @@ const handleSubmit = () => {
           Stok terbatas! Pesan hari ini, esok nikmati!
         </p>
         <div class="price-info">
-          <span class="original-price">Rp 150.000</span>
-          <span class="discounted-price">Rp 99.000</span>
+          <span class="original-price">Rp 500.000</span>
+          <span class="discounted-price">Rp 190.000</span>
+          <span class="note-price">*Harga Sudah Termasuk Ongkir</span>
         </div>
         <button class="buy-button" @click="handleBuyNow">Beli Sekarang</button>
       </div>
@@ -263,7 +264,14 @@ const handleSubmit = () => {
 
         <div class="form-group">
           <label>WhatsApp</label>
-          <input type="tel" v-model="orderForm.phone" required>
+          <input 
+            type="tel" 
+            v-model="orderForm.phone" 
+            pattern="[0-9]*"
+            @input="orderForm.phone = orderForm.phone.replace(/[^0-9]/g, '')"
+            maxlength="13"
+            placeholder="Contoh: 081234567890"
+            required>
         </div>
 
         <div class="form-group">

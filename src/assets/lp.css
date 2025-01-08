@@ -486,15 +486,12 @@
   gap: 2rem;
 }
 
-.review-card:nth-child(even) {
-  flex-direction: row-reverse;
-}
-
 .review-content {
   flex: 1;
   padding: 2rem;
   border-radius: 10px;
   box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  background-color: rgba(255, 255, 255, 0.9); /* Added more opaque background */
 }
 
 .stars {
@@ -535,28 +532,6 @@
 .review-card:nth-child(even) {
   margin-left: auto;
   flex-direction: row-reverse;
-}
-
-.review-card:nth-child(even) .review-content:before {
-  content: '';
-  position: absolute;
-  right: -10px;
-  top: 50%;
-  transform: translateY(-50%);
-  border-left: 10px solid white;
-  border-top: 10px solid transparent;
-  border-bottom: 10px solid transparent;
-}
-
-.review-card:nth-child(odd) .review-content:before {
-  content: '';
-  position: absolute;
-  left: -10px;
-  top: 50%;
-  transform: translateY(-50%);
-  border-right: 10px solid white;
-  border-top: 10px solid transparent;
-  border-bottom: 10px solid transparent;
 }
 
 @media (max-width: 768px) {
@@ -662,9 +637,15 @@
 }
 
 .discounted-price {
-  font-size: 2.5rem;
+  font-size: 3.5rem;
   font-weight: bold;
   color: #C17817;
+}
+.note-price {
+  color: #ff0000;
+  font-size: 0.8rem;
+  margin-top: 0.5rem;
+  display: block;
 }
 
 .buy-button {

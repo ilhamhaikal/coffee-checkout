@@ -28,3 +28,19 @@ coverage
 *.sw?
 
 *.tsbuildinfo
+
+# Golang Backend
+/backend/
+*.exe
+*.exe~
+*.dll
+*.so
+*.dylib
+*.test
+*.out
+/backend/go.sum
+/backend/tmp/
+/backend/.env
+/backend/vendor/
+/backend/bin/
+*.db
