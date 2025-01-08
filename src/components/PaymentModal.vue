@@ -39,7 +39,18 @@ const generateInvoiceNumber = () => {
 const invoiceNumber = generateInvoiceNumber()
 
 const generateWhatsAppMessage = () => {
-  const message = `Halo ka, saya mau konfirmasi untuk:\nNo Invoice: ${invoiceNumber}\nPembayaran untuk pesanan ${props.orderDetails.product} (${props.orderDetails.weight}g)`
+  const message = `Halo ka, saya mau konfirmasi untuk:
+
+No Invoice: ${invoiceNumber}
+Nama: ${props.orderDetails.name}
+Alamat: ${props.orderDetails.address}
+Catatan: ${props.orderDetails.notes}
+
+Detail Pesanan:
+Produk: ${props.orderDetails.product}
+Berat: ${props.orderDetails.weight}g
+Jumlah: ${props.orderDetails.quantity}
+Total: Rp ${formatPrice(props.totalPrice * props.orderDetails.quantity)}`
   return encodeURIComponent(message)
 }
 </script>
