@@ -124,7 +124,6 @@ Total: Rp ${formatPrice(props.totalPrice * props.orderDetails.quantity)}`
               1770020540834
             </div>
             <div class="card-name">Kopi Kuning Garut</div>
-            <img src="../assets/mandiri-logo.png" alt="Mandiri" class="bank-logo">
           </div>
           <p class="account-info">A/N: Ilham Muhammad Haika</p>
         </div>
@@ -285,8 +284,9 @@ detail-row:last-child {
 }
 
 .bank-card {
-  background: linear-gradient(135deg, #0046AF 0%, #002B6B 100%);
-  color: white;
+  background: url('../assets/mandiri-logo.jpg') no-repeat center center;
+  background-size: cover; 
+  /* color: white; */
   padding: 1.5rem;
   border-radius: 15px;
   margin: 1.5rem 0;
@@ -295,6 +295,17 @@ detail-row:last-child {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+}
+
+.bank-logo {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 15px;
+  z-index: 1;
 }
 
 .card-chip {
@@ -313,13 +324,6 @@ detail-row:last-child {
 .card-name {
   font-size: 1rem;
   text-transform: uppercase;
-}
-
-.bank-logo {
-  position: absolute;
-  bottom: 1rem;
-  right: 1rem;
-  height: 40px;
 }
 
 .whatsapp-button {
@@ -365,6 +369,12 @@ detail-row:last-child {
     right: 1.5rem;
   }
 }
+.bank-logo {
+    width: 40px;
+  }
+  .bank-card {
+    height: 180px;
+  }
 
 @media (max-width: 576px) {
   .card-number {
