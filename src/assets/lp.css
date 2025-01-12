@@ -447,6 +447,17 @@
   padding: 4rem 2rem;
   background: url('../assets/blog-bg.jpg') right center/cover fixed;
   color: white;
+  color-scheme: light;
+  -webkit-color-scheme: light;
+  forced-color-adjust: none;
+}
+
+@media (prefers-color-scheme: dark) {
+  .review-section {
+    background: url('../assets/blog-bg.jpg') right center/cover fixed !important;
+    forced-color-adjust: none !important;
+    -webkit-appearance: none;
+  }
 }
 
 .section-header-review {
