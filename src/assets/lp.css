@@ -628,6 +628,7 @@
   align-items: center;
   gap: 2rem;
   margin-bottom: 2rem;
+  flex-wrap: wrap;
 }
 
 .original-price {
@@ -641,6 +642,26 @@
   font-weight: bold;
   color: #C17817;
 }
+
+@media (max-width: 768px) {
+  .price-info {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .original-price {
+    font-size: 1.2rem;
+  }
+
+  .discounted-price {
+    font-size: 2.5rem;
+  }
+
+  .note-price {
+    font-size: 0.7rem;
+  }
+}
+
 .note-price {
   color: #ff0000;
   font-size: 0.8rem;

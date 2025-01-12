@@ -310,7 +310,7 @@ const handleSubmit = () => {
 
   <section class="footer">
     <div class="footer-content">
-      <p>© 2021 Kopi Kuning Garut. All Rights Reserved.</p>
+      <p>© 2025 Kopi Kuning Garut. All Rights Reserved.</p>
     </div>
   </section>
 </template>
