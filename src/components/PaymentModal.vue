@@ -123,7 +123,6 @@ Total: Rp ${formatPrice(props.totalPrice * props.orderDetails.quantity)}`
             <div class="card-number" @click="copyAccountNumber" style="cursor: pointer" title="Click to copy">
               1770020540834
             </div>
-            <div class="card-name">Kopi Kuning Garut</div>
           </div>
           <p class="account-info">A/N: Ilham Muhammad Haika</p>
         </div>
@@ -319,11 +318,12 @@ detail-row:last-child {
   font-size: 1.4rem;
   letter-spacing: 2px;
   margin: 1rem 0;
-}
-
-.card-name {
-  font-size: 1rem;
-  text-transform: uppercase;
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
 }
 
 .whatsapp-button {
